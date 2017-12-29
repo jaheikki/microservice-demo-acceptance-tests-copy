@@ -47,6 +47,12 @@ services:
      - "27017:27017"
     expose: 
      - "27017"
+  mariadb:
+    image: mariadb:10.3
+    environment:
+      - MYSQL_ROOT_PASSWORD=ruutti-access
+    ports:
+      - "3309:3306"
 #   browserstack:
 #    image: andon/browserstack
 #    entrypoint: /usr/local/bin/BrowserStackLocal --key qcGwaiyQpFFibmBoyEp3 --enable-logging-for-api --verbose 3
